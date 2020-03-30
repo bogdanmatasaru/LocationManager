@@ -300,7 +300,6 @@ static id _sharedInstance;
  If an error occurs, the block will execute with a status other than INTULocationStatusSuccess, and the subscription will be canceled automatically.
 
  @param desiredAccuracy The accuracy level desired, which controls how much power is used by the device's location services.
- @param desiredActivityType The activity type that is to be tracked, controls when/if tracking it paused.
  @param block           The block to execute every time an updated location is available. Note that this block runs for every update, regardless of
                         whether the achievedAccuracy is at least the desiredAccuracy.
                         The status will be INTULocationStatusSuccess unless an error occurred; it will never be INTULocationStatusTimedOut.
@@ -650,7 +649,11 @@ static id _sharedInstance;
             INTULMLog(@"Changing location services activity type to: automotive navigation.");
             break;
         case CLActivityTypeAirborne:
-            self.locationManager.activityType = CLActivityTypeAirborne;
+            if (@available(iOS 12.0, *)) {
+                self.locationManager.activityType = CLActivityTypeAirborne;
+            } else {
+                // Fallback on earlier versions
+            }
             INTULMLog(@"Changing location services activity type to: airborne.");
             break;
         case CLActivityTypeOtherNavigation:
