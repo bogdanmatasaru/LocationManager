@@ -17,7 +17,7 @@
 		22F0B51424321A4800DF7CD8 /* INTUHeadingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0B50A24321A4700DF7CD8 /* INTUHeadingRequest.m */; };
 		22F0B51524321A4800DF7CD8 /* INTURequestIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0B50B24321A4800DF7CD8 /* INTURequestIDGenerator.m */; };
 		22F0B51624321A4800DF7CD8 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0B50C24321A4800DF7CD8 /* INTULocationManager.m */; };
-		22F0B51724321A4800DF7CD8 /* INTULocationRequestDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F0B50D24321A4800DF7CD8 /* INTULocationRequestDefines.h */; };
+		22F0B51724321A4800DF7CD8 /* INTULocationRequestDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F0B50D24321A4800DF7CD8 /* INTULocationRequestDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
